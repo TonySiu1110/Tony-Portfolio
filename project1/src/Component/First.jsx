@@ -1,126 +1,151 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-scroll';
+import Rellax from 'rellax';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import '../Styling/Styling1.css';
 import '../Styling/Styling2.css';
-import Testing from './Testing';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookSquare, faTwitter, faInstagram, faGithub, faBehance, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-
+import { faFacebookSquare, faTwitter, faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { motion } from 'framer-motion';
 
 
 const First = () => {
+  
+  useEffect(() => {
+    new Rellax('.rellax');
+    AOS.init();
+
+    // Simulate page load and hide preloader
+    window.addEventListener('load', () => {
+      setTimeout(() => setIsLoaded(true), 1000); // Add delay for preloader effect
+    });
+  }, []);
   return (
     <>
-        <header className="s-header">
+        <motion.header
+        className="s-header"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 2 }}
+        transition={{ duration: 2.5 }}
+      >
         <div className="row s-header__nav-wrap">
-            <nav className="s-header__nav">
-                <ul>
-                    <li className="current"><a className="smoothscroll" href="#hero">Home</a></li>
-                    <li><a className="smoothscroll" href="#about">About</a></li>
-                    <li><a className="smoothscroll" href="#resume">Resume</a></li>
-                    <li><a className="smoothscroll" href="#portfolio">Workout</a></li>
-                    <li><a className="smoothscroll" href="#testimonials">Project</a></li>
-                    
-                </ul>
-            </nav>
+          <nav className="s-header__nav">
+            <ul>
+              <li><Link className="smoothscroll" to="hero" smooth={true} duration={500}>Home</Link></li>
+              <li><Link className="smoothscroll" to="about" smooth={true} duration={500}>About</Link></li>
+              <li><Link className="smoothscroll" to="resume" smooth={true} duration={500}>Resume</Link></li>
+              <li><Link className="smoothscroll" to="portfolio" smooth={true} duration={500}>Workout</Link></li>
+              <li><Link className="smoothscroll" to="testimonials" smooth={true} duration={500}>Project</Link></li>
+            </ul>
+          </nav>
         </div> 
-        
+
         <a className="s-header__menu-toggle" href="#0" title="Menu">
-            <span className="s-header__menu-icon"></span>
+          <span className="s-header__menu-icon"></span>
         </a>
-    </header> 
+      </motion.header>
 
-    <section id="hero" className="s-hero target-section">
-
+      <motion.section
+        id="hero"
+        className="s-hero target-section"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+      >
         <div className="s-hero__bg rellax" data-rellax-speed="-7"></div>
 
         <div className="row s-hero__content">
-            <div className="column">
+          <div className="column">
+            <div className="s-hero__content-about">
+              <h1>I'm Tony Siu.</h1>
+              <h3>
+                I'm a Toronto based <span>Full Stack Developer</span>, <span>Data Engineer </span> and <span>Powerlifter</span> creating awesome and
+                applications and data pipeline for companies that I have worked for! Let's <a className="smoothscroll" href="#about">start scrolling</a>
+                and learn more <a className="smoothscroll" href="#about">about me</a>.
+              </h3>
 
-                <div className="s-hero__content-about">
+              <div className="s-hero__content-social">
+                <a href="#0"><FontAwesomeIcon icon={faFacebookSquare} /></a>
+                <a href="#0"><FontAwesomeIcon icon={faTwitter} /></a>
+                <a href="#0"><FontAwesomeIcon icon={faInstagram} /></a>
+                <a href="https://github.com/TonySiu1110" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a>
+                <a href="https://www.linkedin.com/in/kinghoitony/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a>
+              </div>
 
-                    <h1>I'm Tony Siu.</h1>
-
-                    <h3>
-                    I'm a Toronto based <span>Full Stack Developer</span>, <span>Data Engineer </span> and <span>Powerlifter</span> creating awesome and
-                    pplications and data pipeline for companies that I have worked for! Let's <a className="smoothscroll" href="#about">start scrolling</a>
-                    and learn more <a className="smoothscroll" href="#about">about me</a>.
-                    </h3>
-
-                    <div className="s-hero__content-social">
-                    <a href="#0"><FontAwesomeIcon icon={faFacebookSquare} /></a>
-                    <a href="#0"><FontAwesomeIcon icon={faTwitter} /></a>
-                    <a href="#0"><FontAwesomeIcon icon={faInstagram} /></a>
-                    <a href="https://github.com/TonySiu1110" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a>
-                    <a href="https://www.linkedin.com/in/kinghoitony/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a>
-                    </div>
-
-                </div> 
-
-            </div>
+            </div> 
+          </div>
         </div> 
 
-    <div className="s-hero__scroll">
-    <a href="#about" className="s-hero__scroll-link smoothscroll">
-        <span className="scroll-arrow">
-            <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                width="24" 
-                height="24" 
-                viewBox="0 0 24 24" 
-                style={{
-                    fill: "rgba(0, 0, 0, 1)"
-                }}
-            >
+        <div className="s-hero__scroll">
+          <a href="#about" className="s-hero__scroll-link smoothscroll">
+            <span className="scroll-arrow">
+              <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="24" 
+                  height="24" 
+                  viewBox="0 0 24 24" 
+                  style={{
+                      fill: "rgba(0, 0, 0, 1)"
+                  }}
+              >
                 <path d="M18.707 12.707L17.293 11.293 13 15.586 13 6 11 6 11 15.586 6.707 11.293 5.293 12.707 12 19.414z"></path>
-            </svg>
-        </span>
-        <span className="scroll-text">Scroll Down</span>
-    </a>
-    </div>
-</section>
-
-<section id="about" className="s-about target-section">
-  <div className="row">
-    <div className="column large-3 tab-12">
-      <img className="s-about__pic" src="/src/images/icon.jpg" alt="" />
-    </div>
-    <div className="column large-9 tab-12 s-about__content">
-      <h3>About Me</h3>
-      <p>
-      I’m Tony Siu King Hoi, a Computer Science student at Toronto Metropolitan University, graduating in April 2026. I have over five years of coding experience and enjoy building solutions that merge creativity with functionality. My expertise lies in Python, Java, and data analysis, and I’ve worked on projects ranging from full-stack web applications to data-driven analytics tools. Professionally, I’ve gained experience in data modeling, ETL pipeline development, and full-stack development through internships in both government and private sectors. Fluent in English, Cantonese, and Mandarin, I thrive in collaborative environments and am passionate about leveraging technology to solve real-world problems.
-      </p>
-
-      <hr />
-
-      <div className="row s-about__content-bottom">
-        <div className="column w-1000-stack">
-          <h3>Contact Details</h3>
-          <p>
-            Tony Siu <br />
-            Toronto, Ontario, Canada <br />
-            <a href="tel:+1975432345">+647 861 XXXX</a> <br />
-            <a href="mailto:#0">tony.siu@torontomu.ca</a>
-          </p>
-        </div>
-        <div className="column w-1000-stack">
-          <a href="#0" className="btn btn--download">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              style={{ fill: "rgba(0, 0, 0, 1)" }}
-            >
-              <path d="M12 16L16 11 13 11 13 4 11 4 11 11 8 11z"></path>
-              <path d="M20,18H4v-7H2v7c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2v-7h-2V18z"></path>
-            </svg>
-            Download CV
+              </svg>
+            </span>
+            
+            <span className="scroll-text">Scroll Down</span>
           </a>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </motion.section>
+
+      <motion.section
+        id="about"
+        className="s-about target-section"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+      >
+        <div className="row">
+          <div className="column large-3 tab-12">
+            <img className="s-about__pic" src="/src/images/icon.jpg" alt="" />
+          </div>
+          <div className="column large-9 tab-12 s-about__content">
+            <h3>About Me</h3>
+            <p>
+              I’m Tony Siu King Hoi, a Computer Science student at Toronto Metropolitan University, graduating in April 2026. I have over five years of coding experience and enjoy building solutions that merge creativity with functionality. My expertise lies in Python, Java, and data analysis, and I’ve worked on projects ranging from full-stack web applications to data-driven analytics tools. Professionally, I’ve gained experience in data modeling, ETL pipeline development, and full-stack development through internships in both government and private sectors. Fluent in English, Cantonese, and Mandarin, I thrive in collaborative environments and am passionate about leveraging technology to solve real-world problems.
+            </p>
+
+            <hr />
+
+            <div className="row s-about__content-bottom">
+              <div className="column w-1000-stack">
+                <h3>Contact Details</h3>
+                <p>
+                  Tony Siu <br />
+                  Toronto, Ontario, Canada <br />
+                  <a href="tel:+1975432345">+647 861 XXXX</a> <br />
+                  <a href="mailto:#0">tony.siu@torontomu.ca</a>
+                </p>
+              </div>
+              <div className="column w-1000-stack">
+                <a href="#0" className="btn btn--download">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    style={{ fill: "rgba(0, 0, 0, 1)" }}
+                  >
+                    <path d="M12 16L16 11 13 11 13 4 11 4 11 11 8 11z"></path>
+                    <path d="M20,18H4v-7H2v7c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2v-7h-2V18z"></path>
+                  </svg>
+                  Download CV
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.section>
 <section id="resume" className="s-resume target-section">
       <div className="row s-resume__section">
         <div className="column large-3 tab-12">
@@ -141,7 +166,7 @@ const First = () => {
             <p>
             - Developed a full-stack web application using <span>React.js</span>, <span>Node.js</span>, and <span>Django</span> to collect and process <span>(extract, transform and load)</span> user data. <br />
             - Designed the front-end for user-friendly data entry, handled JSON and XML
-              data formats, and implemented back-end services for data ingestion, validation, and transformation.
+              data formats, and implemented back-end services for data ingestion, validation, and transformation.<br />
             - Integrated the app with an existing ETL data pipeline to ensure seamless data flow and accuracy.<br />
             - Designed and maintained ETL data pipelines using MS SQL, Python (NumPy and Pandas) to efficiently
               extract, transform, and load datasets of up to 500,000 records into databases.<br />
@@ -187,11 +212,7 @@ const First = () => {
             </div>
 
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Inventore vero quidem nobis maxime dolorem aliquam quisquam eum
-              ipsum amet. Vitae aut atque fuga dolorem. Vel voluptatibus fugiat
-              nam. Impedit aperiam nesciunt facilis! Porro architecto dicta
-              inventore tempora ratione quia odio.
+            The BSc (Hons) in Computer Science at Toronto Metropolitan University equips me with skills in software development, data analysis, and cloud computing. I have gained hands-on experience in programming languages such as Java, Python, and SQL, along with proficiency in frameworks like React and Spring Boot. The program focuses on problem-solving, data modeling, and cybersecurity, preparing me for a career in technology.
             </p>
           </div>
 
@@ -220,10 +241,15 @@ const First = () => {
               </li>
               <li>
                 <div className="progress percent85"></div>
+                <strong>Django/Flask</strong>
+              </li>
+              
+              <li>
+                <div className="progress percent85"></div>
                 <strong>Java</strong>
               </li>
               <li>
-                <div className="progress percent85"></div>
+                <div className="progress percent90"></div>
                 <strong>Javascript</strong>
               </li>
               <li>
@@ -239,6 +265,215 @@ const First = () => {
                 <strong>Leadership & Commuciation Skills</strong>
               </li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" className="s-portfolio target-section">
+      <div className="row s-portfolio__header">
+        <div className="column large-12">
+          <h3>My Body Transformation</h3>
+        </div>
+      </div>
+
+      <div className="row collapse block-large-1-4 block-medium-1-3 block-tab-1-2 block-500-stack folio-list">
+        <div className="column folio-item">
+          <a href="#modal-01" className="folio-item__thumb">
+            <img
+              src="/src/images/portfolio/droplet.jpg"
+              srcSet="/src/images/portfolio/droplet.jpg 1x, images/portfolio/droplet@2x.jpg 2x"
+              alt="Droplet"
+            />
+          </a>
+        </div>
+
+        <div className="column folio-item">
+          <a href="#modal-02" className="folio-item__thumb">
+            <img
+              src="/src/images/portfolio/lamp.jpg"
+              srcSet="/src/images/portfolio/lamp.jpg 1x, images/portfolio/lamp@2x.jpg 2x"
+              alt="Lamp"
+            />
+          </a>
+        </div>
+
+        <div className="column folio-item">
+          <a href="#modal-03" className="folio-item__thumb">
+            <img
+              src="i/src/mages/portfolio/minimalismo.jpg"
+              srcSet="/src/images/portfolio/minimalismo.jpg 1x, images/portfolio/minimalismo@2x.jpg 2x"
+              alt="Minimalism"
+            />
+          </a>
+        </div>
+
+        <div className="column folio-item">
+          <a href="#modal-04" className="folio-item__thumb">
+            <img
+              src="/src/images/portfolio/shutterbug.jpg"
+              srcSet="/src/images/portfolio/shutterbug.jpg 1x, images/portfolio/shutterbug@2x.jpg 2x"
+              alt="Shutterbug"
+            />
+          </a>
+        </div>
+
+        <div className="column folio-item">
+          <a href="#modal-05" className="folio-item__thumb">
+            <img
+              src="/src/images/portfolio/fuji.jpg"
+              srcSet="/src/images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x"
+              alt="Fuji"
+            />
+          </a>
+        </div>
+
+        <div className="column folio-item">
+          <a href="#modal-06" className="folio-item__thumb">
+            <img
+              src="/src/images/portfolio/skaterboy.jpg"
+              srcSet="/src/images/portfolio/skaterboy.jpg 1x, images/portfolio/skaterboy@2x.jpg 2x"
+              alt="Skaterboy"
+            />
+          </a>
+        </div>
+
+        <div className="column folio-item">
+          <a href="#modal-07" className="folio-item__thumb">
+            <img
+              src="/src/images/portfolio/rucksack.jpg"
+              srcSet="/src/images/portfolio/rucksack.jpg 1x, images/portfolio/rucksack@2x.jpg 2x"
+              alt="Rucksack"
+            />
+          </a>
+        </div>
+
+        <div className="column folio-item">
+          <a href="#modal-08" className="folio-item__thumb">
+            <img
+              src="/src/images/portfolio/sanddunes.jpg"
+              srcSet="/src/images/portfolio/sanddunes.jpg 1x, images/portfolio/sanddunes@2x.jpg 2x"
+              alt="Sanddunes"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section className="s-cta">
+      <div className="row">
+        <div className="column">
+          <h3 className="h2 section-desc">
+            It is okay to be weak but not to stay weak
+          </h3>
+        </div>
+      </div>
+
+      <div className="row cta-content">
+        <div className="column">
+          <p>
+          "It’s not about being better than someone else. It’s about being better than you were yesterday." -- Zyzz
+          </p>
+
+          <a href="#" className="btn btn--primary h-full-width">Get Started With my Program</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" className="s-testimonials target-section">
+      <div className="s-testimonials__bg"></div>
+
+      <div className="row s-testimonials__header">
+        <div className="column large-12">
+          <h3>Hear What My Clients Say</h3>
+        </div>
+      </div>
+
+      <div className="row s-testimonials__content">
+        <div className="column">
+          <div className="swiper-container testimonial-slider">
+            <div className="swiper-wrapper">
+              {/* Testimonial 1 */}
+              <div className="testimonial-slider__slide swiper-slide">
+                <div className="testimonial-slider__author">
+                  <img
+                    src="images/avatars/user-02.jpg"
+                    alt="Author image"
+                    className="testimonial-slider__avatar"
+                  />
+                  <cite className="testimonial-slider__cite">
+                    <strong>Tim Cook</strong>
+                    <span>CEO, Apple</span>
+                  </cite>
+                </div>
+                <p>
+                  Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem.
+                  Explicabo a quaerat sint autem dolore ducimus ut consequatur neque. Nisi dolores quaerat fuga rem nihil nostrum.
+                  Laudantium quia consequatur molestias delectus culpa.
+                </p>
+              </div>
+
+              {/* Testimonial 2 */}
+              <div className="testimonial-slider__slide swiper-slide">
+                <div className="testimonial-slider__author">
+                  <img
+                    src="images/avatars/user-03.jpg"
+                    alt="Author image"
+                    className="testimonial-slider__avatar"
+                  />
+                  <cite className="testimonial-slider__cite">
+                    <strong>Sundar Pichai</strong>
+                    <span>CEO, Google</span>
+                  </cite>
+                </div>
+                <p>
+                  Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
+                  Nisi eaque consequatur. Voluptatem dignissimos ut ducimus accusantium perspiciatis.
+                  Quasi voluptas eius distinctio. Atque eos maxime.
+                </p>
+              </div>
+
+              {/* Testimonial 3 */}
+              <div className="testimonial-slider__slide swiper-slide">
+                <div className="testimonial-slider__author">
+                  <img
+                    src="images/avatars/user-04.jpg"
+                    alt="Author image"
+                    className="testimonial-slider__avatar"
+                  />
+                  <cite className="testimonial-slider__cite">
+                    <strong>Satya Nadella</strong>
+                    <span>CEO, Microsoft</span>
+                  </cite>
+                </div>
+                <p>
+                  Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.
+                  Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.
+                  Voluptatem dignissimos ut.
+                </p>
+              </div>
+
+              {/* Testimonial 4 */}
+              <div className="testimonial-slider__slide swiper-slide">
+                <div className="testimonial-slider__author">
+                  <img
+                    src="images/avatars/user-05.jpg"
+                    alt="Author image"
+                    className="testimonial-slider__avatar"
+                  />
+                  <cite className="testimonial-slider__cite">
+                    <strong>Jeff Bezos</strong>
+                    <span>CEO, Amazon</span>
+                  </cite>
+                </div>
+                <p>
+                  Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac augue. Fusce vel dui. In ac felis
+                  quis tortor malesuada pretium. Curabitur vestibulum aliquam leo. Qui sed at corrupti expedita voluptas odit.
+                  Nihil ea quia nesciunt. Ducimus aut sed ipsam.
+                </p>
+              </div>
+            </div>
+            <div className="swiper-pagination"></div>
           </div>
         </div>
       </div>

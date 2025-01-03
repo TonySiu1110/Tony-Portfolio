@@ -4007,29 +4007,31 @@
  }
  
  .folio-item__thumb::after {
-     z-index: 1;
-     content: "...";
-     font-family: var(--font-2);
-     font-weight: 300;
-     font-size: 3rem;
-     color: white;
-     display: block;
-     height: 32px;
-     width: 32px;
-     line-height: 32px;
-     margin-left: -16px;
-     margin-top: -16px;
-     text-align: center;
-     opacity: 0;
-     visibility: hidden;
-     -webkit-transform: scale(0.5);
-     transform: scale(0.5);
-     -webkit-transition: all, 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
-     transition: all, 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
-     position: absolute;
-     left: 50%;
-     top: 50%;
- }
+    z-index: 1;
+    content: "2020";
+    font-family: var(--font-2);
+    font-weight: 300;
+    font-size: 3rem;
+    color: white;
+    display: flex; /* Flexbox for centering content */
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    width: 32px;
+    line-height: 32px; /* Ensure that text height is aligned */
+    margin-left: -16px;
+    margin-top: -16px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
  
  .folio-item img {
      display: block;
