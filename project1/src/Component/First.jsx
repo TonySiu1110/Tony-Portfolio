@@ -8,6 +8,7 @@ import '../Styling/Styling2.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare, faTwitter, faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
+import Testimonials from './Testimonials';
 
 
 const First = () => {
@@ -164,16 +165,13 @@ const First = () => {
             </div>
 
             <p>
-            - Developed a full-stack web application using <span>React.js</span>, <span>Node.js</span>, and <span>Django</span> to collect and process <span>(extract, transform and load)</span> user data. <br />
-            - Designed the front-end for user-friendly data entry, handled JSON and XML
-              data formats, and implemented back-end services for data ingestion, validation, and transformation.<br />
-            - Integrated the app with an existing ETL data pipeline to ensure seamless data flow and accuracy.<br />
-            - Designed and maintained ETL data pipelines using MS SQL, Python (NumPy and Pandas) to efficiently
-              extract, transform, and load datasets of up to 500,000 records into databases.<br />
-            - Analyzed up to 60,000 datasets to identify trends, patterns, correlations and errors and developed reports
-              and visualizations with Power BI and Tableau to present insights clearly to stakeholders.<br />
-            - Appling data normalization (1NF, 2NF, 3NF) in provincial internal systems to reduce data redundancy
-              while balancing denormalization for performance improvements in analytical workloads.
+              <ul>
+                <li>Developed a full-stack web application using React.js, Node.js, and Django to collect and process user data, resulting in streamlined data management and improved processing efficiency by 260%.</li>
+                <li>Created the front-end for user-friendly data entry, handled JSON and XML formats, and implemented Python back-end services for data ingestion, validation, and transformation, improving data integrity and system efficiency.</li>
+                <li>Developed and Designed ETL data pipelines using MS SQL, Python (NumPy and Pandas) to efficiently extract, transform, and load datasets of up to 500,000 records into databases.</li>
+                <li>Analyzed up to 60,000 datasets to identify trends, patterns, correlations and errors and developed reports and visualizations with Power BI and Tableau to present insights clearly to stakeholders.</li>
+                <li>Applied data normalization (1NF, 2NF, 3NF) in provincial internal systems to reduce redundancy, balancing denormalization to achieve a 170% performance improvement in analytical workloads.</li>
+            </ul>
             </p>
           </div>
 
@@ -380,105 +378,52 @@ const First = () => {
       </div>
     </section>
 
-    <section id="testimonials" className="s-testimonials target-section">
-      <div className="s-testimonials__bg"></div>
+    <Testimonials />
 
-      <div className="row s-testimonials__header">
+    <section id="contact" className="s-contact target-section">
+      <div className="row s-contact__header">
         <div className="column large-12">
-          <h3>Hear What My Clients Say</h3>
+          <h3 className="section-header-allcaps">Time to connect with me!</h3>
         </div>
       </div>
 
-      <div className="row s-testimonials__content">
-        <div className="column">
-          <div className="swiper-container testimonial-slider">
-            <div className="swiper-wrapper">
-              {/* Testimonial 1 */}
-              <div className="testimonial-slider__slide swiper-slide">
-                <div className="testimonial-slider__author">
-                  <img
-                    src="images/avatars/user-02.jpg"
-                    alt="Author image"
-                    className="testimonial-slider__avatar"
-                  />
-                  <cite className="testimonial-slider__cite">
-                    <strong>Tim Cook</strong>
-                    <span>CEO, Apple</span>
-                  </cite>
-                </div>
-                <p>
-                  Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem.
-                  Explicabo a quaerat sint autem dolore ducimus ut consequatur neque. Nisi dolores quaerat fuga rem nihil nostrum.
-                  Laudantium quia consequatur molestias delectus culpa.
-                </p>
-              </div>
+      <div className="row s-contact__content">
+        <div className="column large-7 medium-12">
+          <h4 className="huge-text">
+            Feel Free to connect me on Linkedin and email me if you have any job opportunities 
+          </h4>
+        </div>
 
-              {/* Testimonial 2 */}
-              <div className="testimonial-slider__slide swiper-slide">
-                <div className="testimonial-slider__author">
-                  <img
-                    src="images/avatars/user-03.jpg"
-                    alt="Author image"
-                    className="testimonial-slider__avatar"
-                  />
-                  <cite className="testimonial-slider__cite">
-                    <strong>Sundar Pichai</strong>
-                    <span>CEO, Google</span>
-                  </cite>
-                </div>
-                <p>
-                  Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
-                  Nisi eaque consequatur. Voluptatem dignissimos ut ducimus accusantium perspiciatis.
-                  Quasi voluptas eius distinctio. Atque eos maxime.
-                </p>
-              </div>
-
-              {/* Testimonial 3 */}
-              <div className="testimonial-slider__slide swiper-slide">
-                <div className="testimonial-slider__author">
-                  <img
-                    src="images/avatars/user-04.jpg"
-                    alt="Author image"
-                    className="testimonial-slider__avatar"
-                  />
-                  <cite className="testimonial-slider__cite">
-                    <strong>Satya Nadella</strong>
-                    <span>CEO, Microsoft</span>
-                  </cite>
-                </div>
-                <p>
-                  Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.
-                  Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.
-                  Voluptatem dignissimos ut.
-                </p>
-              </div>
-
-              {/* Testimonial 4 */}
-              <div className="testimonial-slider__slide swiper-slide">
-                <div className="testimonial-slider__author">
-                  <img
-                    src="images/avatars/user-05.jpg"
-                    alt="Author image"
-                    className="testimonial-slider__avatar"
-                  />
-                  <cite className="testimonial-slider__cite">
-                    <strong>Jeff Bezos</strong>
-                    <span>CEO, Amazon</span>
-                  </cite>
-                </div>
-                <p>
-                  Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac augue. Fusce vel dui. In ac felis
-                  quis tortor malesuada pretium. Curabitur vestibulum aliquam leo. Qui sed at corrupti expedita voluptas odit.
-                  Nihil ea quia nesciunt. Ducimus aut sed ipsam.
+        <div className="column large-4 medium-12">
+          <div className="row contact-infos">
+            <div className="column large-12 medium-6 tab-12">
+              <div className="contact-block">
+                <h5 className="contact-block__header">Email</h5>
+                <p className="contact-block__content">
+                  <a className="mailtoui" href="tony.siu@torontomu.ca">
+                    tony.siu@torontomu.ca
+                  </a>
                 </p>
               </div>
             </div>
-            <div className="swiper-pagination"></div>
+            <div className="column large-12 medium-6 tab-12">
+              <div className="contact-block">
+                <h5 className="contact-block__header">Phone</h5>
+                <p className="contact-block__content">
+                  <a href="tel:+1975432345">+1 (647) 861 XXXX</a>
+                </p>
+              </div>
+            </div>
+
+            <div className="column large-12">
+              <a href="tony.siu@torontomu.ca" className="mailtoui btn btn--primary h-full-width">
+                Let's Talk
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
     
     </>
   );

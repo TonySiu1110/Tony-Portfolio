@@ -4328,7 +4328,7 @@
  .testimonial-slider__avatar {
      width: var(--vspace-2);
      height: var(--vspace-2);
-     border-radius: 100%;
+     border-radius: 0%;
      outline: none;
      position: absolute;
      top: 0;
