@@ -155,9 +155,9 @@ const First = () => {
         <div className="column large-9 tab-12">
           <div className="resume-block">
             <div className="resume-block__header">
-              <h4 className="h3">Treasury Board of Secretariat</h4>
+              <h4 className="h3">Full Stack Developer</h4>
               <p className="resume-block__header-meta">
-                <span>Full Stack Developer</span>
+                <span>Treasury Board of Secretariat</span>
                 <span className="resume-block__header-date">
                   Sep 2024 – Dec 2024
                 </span>
