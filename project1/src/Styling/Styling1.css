@@ -3982,6 +3982,8 @@
  }
  
  .folio-item__thumb {
+    width: 300px; 
+    height: 500px; 
      display: block;
      background-color: white;
      position: relative;
@@ -4005,10 +4007,20 @@
      -webkit-transition: all, .5s;
      transition: all, .5s;
  }
- 
+ .year2020::after{
+    content: "2020";
+ }
+ .year2021::after{
+    content: "2021";
+ }
+ .year2022::after{
+    content: "2022";
+ }
+ .year2024::after{
+    content: "2024";
+ }
  .folio-item__thumb::after {
     z-index: 1;
-    content: "2020";
     font-family: var(--font-2);
     font-weight: 300;
     font-size: 3rem;
@@ -4034,10 +4046,13 @@
   }
  
  .folio-item img {
-     display: block;
-     margin: 0;
-     -webkit-transition: all, .5s;
-     transition: all, .5s;
+    width: 100%; /* Make image fill container */
+    height: 100%; /* Make image fill container */
+    object-fit: cover; /* Crop and cover the container area */
+    display: block;
+    margin: 0;
+    -webkit-transition: all, .5s;
+    transition: all, .5s;
  }
  
  /* on hover

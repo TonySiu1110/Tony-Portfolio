@@ -277,84 +277,43 @@ const First = () => {
 
       <div className="row collapse block-large-1-4 block-medium-1-3 block-tab-1-2 block-500-stack folio-list">
         <div className="column folio-item">
-          <a href="#modal-01" className="folio-item__thumb">
+          <a href="#modal-01" className="folio-item__thumb year2020">
             <img
-              src="/src/images/portfolio/droplet.jpg"
-              srcSet="/src/images/portfolio/droplet.jpg 1x, images/portfolio/droplet@2x.jpg 2x"
+              src="/src/images/2020_body1.jpg"
               alt="Droplet"
             />
           </a>
         </div>
 
         <div className="column folio-item">
-          <a href="#modal-02" className="folio-item__thumb">
+          <a href="#modal-02" className="folio-item__thumb year2021">
             <img
-              src="/src/images/portfolio/lamp.jpg"
-              srcSet="/src/images/portfolio/lamp.jpg 1x, images/portfolio/lamp@2x.jpg 2x"
+              src="/src/images/2021_body.jpg"
               alt="Lamp"
             />
           </a>
         </div>
 
         <div className="column folio-item">
-          <a href="#modal-03" className="folio-item__thumb">
+          <a href="#modal-03" className="folio-item__thumb year2022">
             <img
-              src="i/src/mages/portfolio/minimalismo.jpg"
-              srcSet="/src/images/portfolio/minimalismo.jpg 1x, images/portfolio/minimalismo@2x.jpg 2x"
+              src="/src/images/2022_body.jpg"
               alt="Minimalism"
             />
           </a>
         </div>
 
         <div className="column folio-item">
-          <a href="#modal-04" className="folio-item__thumb">
+          <a href="#modal-04" className="folio-item__thumb year2024">
             <img
-              src="/src/images/portfolio/shutterbug.jpg"
-              srcSet="/src/images/portfolio/shutterbug.jpg 1x, images/portfolio/shutterbug@2x.jpg 2x"
+              src="/src/images/body_2025.jpg"
               alt="Shutterbug"
             />
           </a>
         </div>
 
-        <div className="column folio-item">
-          <a href="#modal-05" className="folio-item__thumb">
-            <img
-              src="/src/images/portfolio/fuji.jpg"
-              srcSet="/src/images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x"
-              alt="Fuji"
-            />
-          </a>
-        </div>
 
-        <div className="column folio-item">
-          <a href="#modal-06" className="folio-item__thumb">
-            <img
-              src="/src/images/portfolio/skaterboy.jpg"
-              srcSet="/src/images/portfolio/skaterboy.jpg 1x, images/portfolio/skaterboy@2x.jpg 2x"
-              alt="Skaterboy"
-            />
-          </a>
-        </div>
-
-        <div className="column folio-item">
-          <a href="#modal-07" className="folio-item__thumb">
-            <img
-              src="/src/images/portfolio/rucksack.jpg"
-              srcSet="/src/images/portfolio/rucksack.jpg 1x, images/portfolio/rucksack@2x.jpg 2x"
-              alt="Rucksack"
-            />
-          </a>
-        </div>
-
-        <div className="column folio-item">
-          <a href="#modal-08" className="folio-item__thumb">
-            <img
-              src="/src/images/portfolio/sanddunes.jpg"
-              srcSet="/src/images/portfolio/sanddunes.jpg 1x, images/portfolio/sanddunes@2x.jpg 2x"
-              alt="Sanddunes"
-            />
-          </a>
-        </div>
+        
       </div>
     </section>
 
