@@ -225,11 +225,7 @@ const First = () => {
         <div className="column large-9 tab-12">
           <div className="resume-block">
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Inventore vero quidem nobis maxime dolorem aliquam quisquam eum
-              ipsum amet. Vitae aut atque fuga dolorem. Vel voluptatibus fugiat
-              nam. Impedit aperiam nesciunt facilis! Porro architecto dicta
-              inventore tempora ratione quia odio.
+            Skilled in Python, Java, and SQL. With expertise in data analysis, ETL pipelines, and full-stack development, he excels in problem-solving, algorithmic thinking, and leveraging tools like Spring Boot, ER/Studio, and cloud platforms to create scalable, efficient software and data solutions.
             </p>
 
             <ul className="skill-bars-fat">
