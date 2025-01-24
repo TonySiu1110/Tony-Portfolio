@@ -8,6 +8,7 @@ This is a modern, interactive website built using React and styled with Tailwind
 
  Enables the website to be highly dynamic and interactive with seamless user experiences.
  Components-based architecture ensures efficient code reuse and scalability.
+ 
  Tailwind CSS:
 
 Provides a clean and professional design with utility-first CSS classes, ensuring rapid and consistent styling across the site.
